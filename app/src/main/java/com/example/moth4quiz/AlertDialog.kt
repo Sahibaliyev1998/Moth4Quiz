@@ -20,8 +20,6 @@ class AlertDialog(val textWatcher: TextWatcher) : DialogFragment() {
         binding = AlertDialogBinding.inflate(layoutInflater,container,false)
 
 
-        
-
         return binding.root
     }
 }

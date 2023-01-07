@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".UsersFragment"
     android:padding="5dp">
 
 
@@ -20,14 +20,13 @@
         android:id="@+id/btnAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_margin="20dp"
         android:text="Add"
         android:textAllCaps="false"/>
-    <fragment
+    <androidx.fragment.app.FragmentContainerView
         android:id="@+id/container"
-        android:name="com.example.moth4quiz.MainFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         />

@@ -1,10 +1,13 @@
 package com.example.moth4quiz
 
+import android.app.ActionBar.LayoutParams
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
+import android.view.WindowManager
+import android.widget.Toast
 import com.example.moth4quiz.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity(),TextWatcher {
@@ -19,7 +22,14 @@ class MainActivity : AppCompatActivity(),TextWatcher {
 
         binding.btnAdd.setOnClickListener {
             val dialog =AlertDialog(this)
-            dialog.show(supportFragmentManager,"InputDialog")
+            dialog.dialog?.window?.attributes?.width = WindowManager.LayoutParams.MATCH_PARENT
+            dialog.show(supportFragmentManager, "ljbcd")
+
+
+        }
+
+        adapter = Adapter(arrayListOf()){
+            Toast.makeText(this, it.toString(), Toast.LENGTH_SHORT).show()
         }
 
 
